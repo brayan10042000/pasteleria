@@ -1,0 +1,4 @@
+0 = pedidos
+1 = procesado
+2 = enviado
+3 = completo
