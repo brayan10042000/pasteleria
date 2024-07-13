@@ -59,8 +59,8 @@ class ImagenProducto extends CI_Controller
         }
         $data = array(
             'title' => 'Agregar Imagen del Producto',
-            'producto'  => $this->m_producto->get_data($id_producto),
-            'imagen' => $this->m_imagenproducto->get_imagen($id_producto),
+            'producto'  => $this->m_producto->obtener_datos($id_producto),
+            'imagen' => $this->m_imagenproducto->obtener_imagen($id_producto),
             'isi' => 'imagenproducto/v_agregar',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
@@ -69,7 +69,7 @@ class ImagenProducto extends CI_Controller
     public function eliminar($id_producto, $id_imagen)
     {
         // eliminar imagen
-        $imagen = $this->m_imagenproducto->get_data($id_imagen);
+        $imagen = $this->m_imagenproducto->obtener_datos($id_imagen);
         
         if ($imagen->imagen != "") {
             unlink('./assets/imagenproducto/' . $imagen->imagen);

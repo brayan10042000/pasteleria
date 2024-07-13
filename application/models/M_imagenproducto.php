@@ -24,7 +24,7 @@ class M_imagenproducto extends CI_Model
     }
 
     // obtener imágenes por ID de producto
-    public function obtener_imagenes($id_producto)
+    public function obtener_imagen($id_producto)
     {
         $this->db->select('*');
         $this->db->from('tbl_imagen');

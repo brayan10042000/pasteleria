@@ -96,7 +96,7 @@
 								<td>
 									<?php if ($value->estado_pago == 1) { ?>
 
-										<button class="btn btn-sm btn-flat btn-primary" data-toggle="modal" data-target="#kirim<?= $value->id_transaccion ?>"><i class="fa fa-paper-plane"></i> Enviar</button>
+										<button class="btn btn-sm btn-flat btn-primary" data-toggle="modal" data-target="#enviar<?= $value->id_transaccion ?>"><i class="fa fa-paper-plane"></i> Enviar</button>
 									<?php } ?>
 
 								</td>
@@ -257,7 +257,7 @@
 						<tr>
 							<th>No Residencia</th>
 							<th>:</th>
-							<th><input name="numero_rastreo" class="form-control" placeholder="No Resi" required></th>
+							<th><input name="numero_rastreo" class="form-control" placeholder="No Residencia" required></th>
 						</tr>
 					</table>
 
