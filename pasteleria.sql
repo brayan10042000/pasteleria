@@ -205,7 +205,7 @@ CREATE TABLE `tbl_transaccion` (
   `ciudad` varchar(25) DEFAULT NULL,
   `direccion` text DEFAULT NULL,
   `codigo_postal` varchar(8) DEFAULT NULL,
-  `empresa_envio` varchar(255) DEFAULT NULL,
+  `expedicion` varchar(255) DEFAULT NULL,
   `paquete` varchar(255) DEFAULT NULL,
   `estimacion` varchar(255) DEFAULT NULL,
   `costo_envio` int(11) DEFAULT NULL,
@@ -225,7 +225,7 @@ CREATE TABLE `tbl_transaccion` (
 -- Volcado de datos para la tabla `tbl_transaccion`
 --
 
-INSERT INTO `tbl_transaccion` (`id_transaccion`, `id_cliente`, `numero_orden`, `fecha_orden`, `nombre_receptor`, `telefono_receptor`, `provincia`, `ciudad`, `direccion`, `codigo_postal`, `empresa_envio`, `paquete`, `estimacion`, `costo_envio`, `peso`, `total_general`, `total_pago`, `estado_pago`, `comprobante_pago`, `a_nombre_de`, `nombre_banco`, `numero_cuenta`, `estado_orden`, `numero_rastreo`) VALUES
+INSERT INTO `tbl_transaccion` (`id_transaccion`, `id_cliente`, `numero_orden`, `fecha_orden`, `nombre_receptor`, `telefono_receptor`, `provincia`, `ciudad`, `direccion`, `codigo_postal`, `expedicion`, `paquete`, `estimacion`, `costo_envio`, `peso`, `total_general`, `total_pago`, `estado_pago`, `comprobante_pago`, `a_nombre_de`, `nombre_banco`, `numero_cuenta`, `estado_orden`, `numero_rastreo`) VALUES
 (27, 7, '20230119KV86Y9AI', '2023-01-19', 'kk', '77985', 'Java Oriental', '251', 'nn', '77', 'jne', 'REG', '4-5 Días', 20000, 200, 90000, 110000, 0, NULL, NULL, NULL, NULL, 0, NULL),
 (26, 7, '20230119KLBRQNGY', '2023-01-19', 'Siti Aisyah', '086453456246', 'DI Yogyakarta', '419', 'Sleman', '55511', 'jne', 'CTC', '1-2 Días', 6000, 225, 120000, 126000, 1, 'noimage.png', 'Siti Aisyah', 'BRI', '0091863525126', 1, NULL);
 

@@ -18,7 +18,7 @@ class Categoria extends CI_Controller
 			$data = array(
 				'title' => 'Categoría',
 				'categoria' => $this->m_categoria->obtener_todos_los_datos(),
-				'isi' => 'v_categoria',
+				'contenido' => 'v_categoria',
 			);
 			$this->load->view('layout/v_wrapper_backend', $data, FALSE);
 		}else{

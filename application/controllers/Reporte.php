@@ -13,7 +13,7 @@ class Reporte extends CI_Controller
     {
         $data = array(
             'title' => 'Reporte',
-            'isi' => 'v_reporte',
+            'contenido' => 'v_reporte',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
@@ -30,7 +30,7 @@ class Reporte extends CI_Controller
             'mes' => $mes,
             'año' => $año,
             'reporte' => $this->m_reporte->rep_diario($fecha, $mes, $año),
-            'isi' => 'v_rep_diario',
+            'contenido' => 'v_rep_diario',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }

@@ -14,7 +14,7 @@ class Inicio extends CI_Controller
 		$data = array(
 			'title' => 'Inicio',
 			'producto' => $this->m_inicio->obtener_todos_datos(),
-			'isi' => 'v_inicio',
+			'contenido' => 'v_inicio',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}
@@ -25,7 +25,7 @@ class Inicio extends CI_Controller
 		$data = array(
 			'title' => 'Categoría: ' . $categoria->nombre_categoria,
 			'producto' => $this->m_inicio->obtener_todos_los_datos_producto($id_categoria),
-			'isi' => 'v_categoria_producto',
+			'contenido' => 'v_categoria_producto',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}
@@ -36,7 +36,7 @@ class Inicio extends CI_Controller
 			'title' => 'Detalles del Producto',
 			'imagen' => $this->m_inicio->imagenes_producto($id_producto),
 			'producto' => $this->m_inicio->detalle_producto($id_producto),
-			'isi' => 'v_detalle_producto',
+			'contenido' => 'v_detalle_producto',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}

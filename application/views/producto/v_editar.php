@@ -57,12 +57,12 @@
 				<div class="col-sm-6">
 					<div class="form-group">
 						<label>Foto </label>
-						<input type="file" name="imagen" class="form-control" id="preview_gambar">
+						<input type="file" name="imagen" class="form-control" id="imagen_vistaprevia">
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="form-group">
-						<img src="<?= base_url('assets/imagen/' . $producto->imagen) ?>" id="gambar_load" width="400px">
+						<img src="<?= base_url('assets/imagen/' . $producto->imagen) ?>" id="carga_imagen" width="400px">
 					</div>
 				</div>
 			</div>
@@ -77,16 +77,16 @@
 </div>
 
 <script>
-	function bacaGambar(input) {
+	function leerImagen(input) {
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				$('#gambar_load').attr('src', e.target.result);
+				$('#carga_imagen').attr('src', e.target.result);
 			}
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
-	$("#preview_gambar").change(function() {
-		bacaGambar(this);
+	$("#imagen_vistaprevia").change(function() {
+		leerImagen(this);
 	});
 </script>

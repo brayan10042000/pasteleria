@@ -3,7 +3,7 @@
 	<div class="small-box bg-info">
 		<div class="inner">
 			<h3><?= $total_pedidos_recibidos ?></h3>
-			<p>Total Ordenes</p>
+			<p>Ordenes</p>
 		</div>
 		<div class="icon">
 			<i class="ion ion-bag"></i>
@@ -31,7 +31,7 @@
 	<div class="small-box bg-warning">
 		<div class="inner">
 			<h3><?= $total_cliente ?></h3>
-			<p>Miembros</p>
+			<p>Clientes</p>
 		</div>
 		<a href="<?= base_url('cliente') ?>" class="small-box-footer">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
 		<div class="icon">

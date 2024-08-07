@@ -20,7 +20,7 @@ class Admin extends CI_Controller
             'total_categoria' => $this->m_admin->total_categoria(),
             'total_pedidos_recibidos' => $this->m_admin->total_pedidos_recibidos(),
             'total_cliente' => $this->m_admin->total_cliente(),
-            'isi' => 'v_admin',
+            'contenido' => 'v_admin',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
@@ -37,7 +37,7 @@ class Admin extends CI_Controller
                 $data = array(
                     'title' => 'Configuración',
                     'configuracion' => $this->m_admin->datos_configuracion(),
-                    'isi' => 'v_configuracion',
+                    'contenido' => 'v_configuracion',
                 );
                 $this->load->view('layout/v_wrapper_backend', $data, FALSE);
             } else {
@@ -63,7 +63,7 @@ class Admin extends CI_Controller
         $data = array(
             'title' => 'Clientes',
             'clientes' => $this->m_admin->obtener_todos_datos(),
-            'isi' => 'v_cliente',
+            'contenido' => 'v_cliente',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
@@ -76,7 +76,7 @@ class Admin extends CI_Controller
             'pedido_en_proceso' => $this->m_pedidos_recibidos->pedido_en_proceso(),
             'pedido_enviado' => $this->m_pedidos_recibidos->pedido_enviado(),
             'pedido_completado' => $this->m_pedidos_recibidos->pedido_completado(),
-            'isi' => 'v_pedidos_recibidos',
+            'contenido' => 'v_pedidos_recibidos',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }

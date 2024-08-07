@@ -45,7 +45,7 @@
 									<td><?= $value->numero_orden ?></td>
 									<td><?= $value->fecha_orden ?></td>
 									<td>
-										<b><?= $value->empresa_envio ?></b><br>
+										<b><?= $value->expedicion ?></b><br>
 										Paquete : <?= $value->paquete ?><br>
 										Envio : <?= number_format($value->costo_envio, 0) ?>
 									</td>
@@ -84,7 +84,7 @@
 									<td><?= $value->numero_orden ?></td>
 									<td><?= $value->fecha_orden ?></td>
 									<td>
-										<b><?= $value->empresa_envio ?></b><br>
+										<b><?= $value->expedicion ?></b><br>
 										Paquete : <?= $value->paquete ?><br>
 										Envio : <?= number_format($value->costo_envio, 0) ?>
 									</td>
@@ -116,7 +116,7 @@
 									<td><?= $value->numero_orden ?></td>
 									<td><?= $value->fecha_orden ?></td>
 									<td>
-										<b><?= $value->empresa_envio ?></b><br>
+										<b><?= $value->expedicion ?></b><br>
 										Paquete : <?= $value->paquete ?><br>
 										Envio : <?= number_format($value->costo_envio, 0) ?>
 									</td>
@@ -125,8 +125,8 @@
 										<span class="badge badge-success">Enviado</span><br>
 									</td>
 									<td>
-										<h5><?= $value->no_resi ?><br>
-											<button data-toggle="modal" data-target="#diterima<?= $value->id_transaccion ?>" class="btn btn-primary btn-xs btn-flat">Aceptado</button>
+										<h5><?= $value->numero_rastreo ?><br>
+											<button data-toggle="modal" data-target="#recibido<?= $value->id_transaccion ?>" class="btn btn-primary btn-xs btn-flat">Enviado</button>
 										</h5>
 									</td>
 								</tr>
@@ -148,7 +148,7 @@
 									<td><?= $value->numero_orden ?></td>
 									<td><?= $value->fecha_orden ?></td>
 									<td>
-										<b><?= $value->empresa_envio ?></b><br>
+										<b><?= $value->expedicion ?></b><br>
 										Paquete : <?= $value->paquete ?><br>
 										Envio : <?= number_format($value->costo_envio, 0) ?>
 									</td>

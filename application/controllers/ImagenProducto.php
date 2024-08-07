@@ -15,7 +15,7 @@ class ImagenProducto extends CI_Controller
         $data = array(
             'title' => 'Imagen del Producto',
             'imagenproducto' => $this->m_imagenproducto->obtener_todos_los_datos(),
-            'isi' => 'imagenproducto/v_index',
+            'contenido' => 'imagenproducto/v_index',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }

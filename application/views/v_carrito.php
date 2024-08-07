@@ -72,7 +72,7 @@
 						<td class="right">
 							<h3>Precio. <?php echo number_format($this->cart->total(), 0); ?></h3>
 						</td>
-						<th>Peso Toatal : <?= $tot_peso ?> Gramos</th>
+						<th>Peso Total : <?= $tot_peso ?> Gramos</th>
 						<td></td>
 						<td></td>
 						<td></td>

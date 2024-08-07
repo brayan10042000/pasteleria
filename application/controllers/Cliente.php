@@ -15,7 +15,7 @@ class Cliente extends CI_Controller
 		$data = array(
 			'title' => 'Miembros',
 			'clientes' => $this->m_admin->obtener_todos_datos(),
-			'isi' => 'v_cliente'
+			'contenido' => 'v_cliente'
 		);
 
 		$this->load->view('layout/v_wrapper_backend', $data, FALSE);
@@ -30,7 +30,7 @@ class Cliente extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$data = array(
 				'title' => 'Registro de Miembro',
-				'isi' => 'v_registrar',
+				'contenido' => 'v_registrar',
 			);
 			$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 		} else {
@@ -56,7 +56,7 @@ class Cliente extends CI_Controller
 		}
 		$data = array(
 			'title' => 'Inicio de Sesión de Miembro',
-			'isi' => 'v_login_cliente',
+			'contenido' => 'v_login_cliente',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}
@@ -69,10 +69,10 @@ class Cliente extends CI_Controller
 	public function cuenta()
 	{
 		// proteccion de página
-		$this->cliente_login->proteksi_halaman();
+		$this->cliente_login->proteccion_pagina();
 		$data = array(
 			'title' => 'Mi Cuenta',
-			'isi' => 'v_mi_cuenta',
+			'contenido' => 'v_mi_cuenta',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}

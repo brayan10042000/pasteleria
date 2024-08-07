@@ -16,7 +16,7 @@ class Producto extends CI_Controller
         $data = array(
             'title' => 'Producto',
             'producto' => $this->m_producto->obtener_todos_los_datos(),
-            'isi' => 'producto/v_producto',
+            'contenido' => 'producto/v_producto',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
@@ -46,7 +46,7 @@ class Producto extends CI_Controller
                     'title' => 'Agregar Producto',
                     'categoria' => $this->m_categoria->obtener_todos_los_datos(),
                     'error_upload' => $this->upload->display_errors(),
-                    'isi' => 'producto/v_agregar',
+                    'contenido' => 'producto/v_agregar',
                 );
                 $this->load->view('layout/v_wrapper_backend', $data, FALSE);
             } else {
@@ -71,7 +71,7 @@ class Producto extends CI_Controller
         $data = array(
             'title' => 'Agregar Producto',
             'categoria' => $this->m_categoria->obtener_todos_los_datos(),
-            'isi' => 'producto/v_agregar',
+            'contenido' => 'producto/v_agregar',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
@@ -102,7 +102,7 @@ class Producto extends CI_Controller
                     'categoria' => $this->m_categoria->obtener_todos_los_datos(),
                     'producto' => $this->m_producto->obtener_datos($id_producto),
                     'error_upload' => $this->upload->display_errors(),
-                    'isi' => 'producto/v_editar',
+                    'contenido' => 'producto/v_editar',
                 );
                 $this->load->view('layout/v_wrapper_backend', $data, FALSE);
             } else {
@@ -147,7 +147,7 @@ class Producto extends CI_Controller
             'title' => 'Actualizar Producto',
             'categoria' => $this->m_categoria->obtener_todos_los_datos(),
             'producto' => $this->m_producto->obtener_datos($id_producto),
-            'isi' => 'producto/v_editar',
+            'contenido' => 'producto/v_editar',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }

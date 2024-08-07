@@ -29,7 +29,7 @@
 					if ($this->session->flashdata('pesan')) {
 						echo '<div class="alert alert-success alert-dismissible">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<h5><i class="icon fas fa-check"></i> Sukses!</h5>';
+	<h5><i class="icon fas fa-check"></i> ¡Éxito!</h5>';
 						echo $this->session->flashdata('pesan');
 						echo '</div>';
 					}
@@ -63,7 +63,7 @@
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-4">
-                Sign up
+                Registrarse
               </button>
 			  <a href="<?= base_url('cliente/login') ?>" class="text-center">Tengo una cuenta...!</a>
             </form>
@@ -73,7 +73,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/096.jpg" class="w-100 rounded-4 shadow-4"
+        <img src="https://cdn.quest.eb.com/images/164/164_3223/164_3223628-W.jpg" class="w-100 rounded-4 shadow-4"
           alt="" />
       </div>
     </div>

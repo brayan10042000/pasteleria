@@ -1,4 +1,4 @@
 <?php
-if ($isi) {
-	$this->load->view($isi);
+if ($contenido) {
+	$this->load->view($contenido);
 }

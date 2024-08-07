@@ -18,7 +18,7 @@ class Mis_pedidos extends CI_Controller
 			'en_proceso' => $this->m_transacciones->en_proceso(),
 			'enviado' => $this->m_transacciones->enviado(),
 			'completado' => $this->m_transacciones->completado(),
-			'isi' => 'v_mis_pedidos',
+			'contenido' => 'v_mis_pedidos',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}
@@ -38,7 +38,7 @@ class Mis_pedidos extends CI_Controller
 					'pedido' => $this->m_transacciones->detalle_pedido($id_transaccion),
 					'cuenta_bancaria' => $this->m_transacciones->cuenta_bancaria(),
 					'error_upload' => $this->upload->display_errors(),
-					'isi' => 'v_pagar',
+					'contenido' => 'v_pagar',
 				);
 				$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 			} else {
@@ -54,7 +54,7 @@ class Mis_pedidos extends CI_Controller
 					'estado_pago' => '1',
 					'comprobante_pago' => $upload_data['uploads']['file_name'],
 				);
-				$this->m_transacciones->upload_comprobante_pago($data);
+				$this->m_transacciones->subir_comprobante_pago($data);
 				$this->session->set_flashdata('mensaje', '¡Comprobante de Pago Subido Exitosamente!');
 				redirect('mis_pedidos');
 			}
@@ -64,7 +64,7 @@ class Mis_pedidos extends CI_Controller
 			'title' => 'Transacción',
 			'pedido' => $this->m_transacciones->detalle_pedido($id_transaccion),
 			'cuenta_bancaria' => $this->m_transacciones->cuenta_bancaria(),
-			'isi' => 'v_pagar',
+			'contenido' => 'v_pagar',
 		);
 		$this->load->view('layout/v_wrapper_frontend', $data, FALSE);
 	}

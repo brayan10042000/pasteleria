@@ -33,7 +33,7 @@
 <div class="container">
     <div class="row">
       <div class="col-sm-6"> 
-        <img class="img-thumbnail" src="https://t3.ftcdn.net/jpg/01/76/33/14/360_F_176331484_nLHY9EoW0ETwPZaS9OBXPGbCJhT70GZe.jpg" alt="images" style="width:120%; height: 100%;">
+        <img class="img-thumbnail" src="https://cdn.quest.eb.com/images/164/164_3218/164_3218824-W.jpg" alt="images" style="width:120%; height: 100%;">
       </div>
       <div class="col-sm-6" style="text-align: justify;">
         <h3><b>¿Quienes somo nosotros?</b></h3>
@@ -50,7 +50,7 @@
     <h3>¿Por qué Elegirnos?</h3>
     <div class="row">
       <div class="col-sm-6">
-        <img src="https://www.tastingtable.com/img/gallery/30-types-of-cake-explained/l-intro-1658850950.jpg" class="align-self-center mr-3" alt="image" style="width:100%">
+        <img src="https://cdn.quest.eb.com/images/132/132_1379/132_1379619-W.jpg" class="align-self-center mr-3" alt="image" style="width:100%">
           <div id="mi" class="media-body" style="text-align: justify; padding: 10px;">
             <h5 class="mt-0">Entrega a domicilio</h5>
             <p class="mb-0">Se puede realizar la entrega desde cualquier lugar y en cualquier momento cuando queramos, embalado en una caja que no dañe la tarta.</p>
@@ -58,7 +58,7 @@
       </div>
 
       <div class="col-sm-6">
-        <img src="https://wallpaperaccess.com/full/1462194.jpg" class="align-self-center mr-3" alt="image" style="width:100%">
+        <img src="https://cdn.quest.eb.com/images/321/321_1753/321_1753869-W.jpg" class="align-self-center mr-3" alt="image" style="width:100%">
           <div class="media-body" style="text-align: justify; padding: 10px;">
             <h5 class="mt-0">Mejor precio</h5>
             <p class="mb-0">El precio es muy asequible pero la calidad y el sabor están garantizados. Si el pedido no coincide se puede devolver en 24 horas.</p>

@@ -9,20 +9,20 @@
 		<!-- /.card-header -->
 		<div class="card-body">
 			<?php
-				if ($this->session->flashdata('pesan')) {
+				if ($this->session->flashdata('mensaje')) {
 					echo '<div class="alert alert-success alert-dismissible">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 					<h5><i class="icon fas fa-check"></i>';
-					echo $this->session->flashdata('pesan');
+					echo $this->session->flashdata('mensaje');
 					echo '</h5></div>';
 				}
 			?>
 			<?php
-			//notifikasi form kosong
+			//notificación de formulario vacío
 			echo validation_errors('<div class="alert alert-danger alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 			<h5><i class="icon fas fa-info"></i>', '</h5> </div>');
-			//notifikasi gagal upload gambar
+			//notificación no pudo cargar la imagen
 			if (isset($error_upload)) {
 				echo '<div class="alert alert-danger alert-dismissible">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -40,13 +40,13 @@
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Imagen</label>
-						<input type="file" name="imagen" class="form-control" id="preview_gambar" required>
+						<input type="file" name="imagen" class="form-control" id="imagen_vistaprevia" required>
 					</div>
 				</div>
 
 				<div class="col-sm-4">
 					<div class="form-group">
-						<img src="<?= base_url('assets/imagen/nofoto.jpg') ?>" id="gambar_load" width="200px">
+						<img src="<?= base_url('assets/imagen/nofoto.jpg') ?>" id="carga_imagen" width="200px">
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 				<?php foreach ($imagen as $key => $value) { ?>
 					<div class="col-sm-3">
 						<div class="form-group">
-							<img src="<?= base_url('assets/imagenproducto/' . $value->imagen) ?>" id="gambar_load" width="250px" height="200px">
+							<img src="<?= base_url('assets/imagenproducto/' . $value->imagen) ?>" id="carga_imagen" width="250px" height="200px">
 						</div>
 						<p for="">Descripcion :  <?= $value->descripcion ?></p>
 						<button data-toggle="modal" data-target="#eliminar<?= $value->id_imagen ?>" class="btn btn-danger btn-xs btn-block"><i class="fas fa-trash"></i> Eliminar</button>
@@ -89,7 +89,7 @@
 				</div>
 				<div class="modal-body text-center">
 					<div class="form-group">
-						<img src="<?= base_url('assets/imagenproducto/' . $value->imagen) ?>" id="gambar_load" width="250px" height="200px">
+						<img src="<?= base_url('assets/imagenproducto/' . $value->imagen) ?>" id="carga_imagen" width="250px" height="200px">
 					</div>
 					<h5>¿Estás segur@ de que quieres eliminar esta imagen ...?</h5>
 				</div>
@@ -106,16 +106,16 @@
 
 
 <script>
-	function bacaGambar(input) {
+	function leerImagen(input) {
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				$('#gambar_load').attr('src', e.target.result);
+				$('#carga_imagen').attr('src', e.target.result);
 			}
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
-	$("#preview_gambar").change(function() {
-		bacaGambar(this);
+	$("#imagen_vistaprevia").change(function() {
+		leerImagen(this);
 	});
 </script>

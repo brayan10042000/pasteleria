@@ -83,7 +83,7 @@
 				<div class="col-sm-6">
 					<div class="form-group">
 						<label>Expedicion</label>
-						<select name="empresa_envio" class="form-control"></select>
+						<select name="expedicion" class="form-control"></select>
 					</div>
 				</div>
 
@@ -234,14 +234,14 @@
 		//
 		$("select[name=paquete]").on("change", function() {
 			//menampilkan ongkir
-			var datos_envio = $("option:selected", this).attr('envio');
-			var reverse = datos_rnvio.toString().split('').reverse().join(''),
-			costo_envio = reverse.match(/\d{1,3}/g);
-			costo_envio = costo_envio.join(',').split('').reverse().join('');
+			var datos_envio = $("option:selected", this).attr('costo_envio');
+			var reverse = datos_envio.toString().split('').reverse().join(''),
+			gastos_envio = reverse.match(/\d{1,3}/g);
+			gastos_envio = gastos_envio.join(',').split('').reverse().join('');
 
-			$("#envio").html("Rp. " + costo_envio)
+			$("#costo_envio").html("Rp. " + gastos_envio)
 			//menghitung totol Bayar
-			var datos_total_pagado = parseInt(costo_envio) + parseInt(<?= $this->cart->total() ?>);
+			var datos_total_pagado = parseInt(datos_envio) + parseInt(<?= $this->cart->total() ?>);
 			var reverse2 = datos_total_pagado.toString().split('').reverse().join(''),
 				costo_total_pagado = reverse2.match(/\d{1,3}/g);
 			costo_total_pagado = costo_total_pagado.join(',').split('').reverse().join('');
@@ -250,8 +250,8 @@
 			//estimasi dan ongkir
 			var estimacion = $("option:selected", this).attr('estimacion');
 			$("input[name=estimacion]").val(estimacion);
-			$("input[name=envio]").val(datos_envio);
-			$("input[name=total_pagado]").val(datos_total_pagado);
+			$("input[name=costo_envio]").val(datos_envio);
+			$("input[name=total_pago]").val(datos_total_pagado);
 		});
 
 

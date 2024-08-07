@@ -15,7 +15,7 @@ class Usuario extends CI_Controller
 		$data = array(
 			'title' => 'Usuario',
 			'usuario' => $this->m_usuario->obtener_todos_los_datos(),
-			'isi' => 'v_usuario',
+			'contenido' => 'v_usuario',
 		);
 		$this->load->view('layout/v_wrapper_backend', $data, FALSE);
 	}

@@ -1,6 +1,6 @@
 <?php
-//wajib urut
-$this->usuario_login->proteksi_halaman();
+//pedido requerido
+$this->usuario_login->proteccion_pagina();
 require_once('v_head.php');
 require_once('v_header_backend.php');
 require_once('v_nav_backend.php');

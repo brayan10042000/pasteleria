@@ -16,7 +16,7 @@ class Carrito extends CI_Controller
         }
         $data = array(
             'title' => 'Carrito de Compras',
-            'isi' => 'v_carrito',
+            'contenido' => 'v_carrito',
         );
         $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
     }
@@ -63,16 +63,15 @@ class Carrito extends CI_Controller
 
     public function checkout()
     {
-        $this->cliente_login->proteksi_halaman();
+        $this->cliente_login->proteccion_pagina();
         $this->form_validation->set_rules('provincia', 'Provincia', 'required');
         $this->form_validation->set_rules('ciudad', 'Ciudad', 'required');
-        $this->form_validation->set_rules('empresa_envio', 'Empersa de Envio', 'required');
+        $this->form_validation->set_rules('expedicion', 'Expedicion', 'required');
         $this->form_validation->set_rules('paquete', 'Paquete', 'required');
-        
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title' => 'Carrito de Checkout',
-                'isi' => 'v_checkout',
+                'contenido' => 'v_checkout',
             );
             $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
         } else {
@@ -87,7 +86,7 @@ class Carrito extends CI_Controller
                 'ciudad' => $this->input->post('ciudad'),
                 'direccion' => $this->input->post('direccion'),
                 'codigo_postal' => $this->input->post('codigo_postal'),
-                'empresa_envio' => $this->input->post('empresa_envio'),
+                'expedicion' => $this->input->post('expedicion'),
                 'paquete' => $this->input->post('paquete'),
                 'estimacion' => $this->input->post('estimacion'),
                 'costo_envio' => $this->input->post('costo_envio'),
@@ -105,9 +104,9 @@ class Carrito extends CI_Controller
                 $data_rinci = array(
                     'numero_orden' => $this->input->post('numero_orden'),
                     'id_producto' => $item['id'],
-                    'qty' => $this->input->post('qty' . $i++),
+                    'cantidad' => $this->input->post('qty' . $i++),
                 );
-                $this->m_transaccion->guardar_detalle_transaccion($data_rinci);
+                $this->m_transacciones->guardar_detalle_transaccion($data_rinci);
             }
             $this->session->set_flashdata('mensaje', '¡Orden procesada con éxito!');
             $this->cart->destroy();

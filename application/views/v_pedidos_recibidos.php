@@ -44,7 +44,7 @@
 								<td><?= $value->numero_orden ?></td>
 								<td><?= $value->fecha_orden ?></td>
 								<td>
-									<b><?= $value->empresa_envio ?></b><br>
+									<b><?= $value->expedicion ?></b><br>
 									Paquete : <?= $value->paquete ?><br>
 									Envío : <?= number_format($value->costo_envio, 0) ?>
 								</td>
@@ -84,7 +84,7 @@
 								<td><?= $value->numero_orden ?></td>
 								<td><?= $value->fecha_orden ?></td>
 								<td>
-									<b><?= $value->empresa_envio ?></b><br>
+									<b><?= $value->expedicion ?></b><br>
 									Paquete : <?= $value->paquete ?><br>
 									Envío : <?= number_format($value->costo_envio, 0) ?>
 								</td>
@@ -120,7 +120,7 @@
 								<td><?= $value->numero_orden ?></td>
 								<td><?= $value->fecha_orden ?></td>
 								<td>
-									<b><?= $value->empresa_envio ?></b><br>
+									<b><?= $value->expedicion ?></b><br>
 									Paquete : <?= $value->paquete ?><br>
 									Envío : <?= number_format($value->costo_envio, 0) ?>
 								</td>
@@ -152,7 +152,7 @@
 								<td><?= $value->numero_orden ?></td>
 								<td><?= $value->fecha_orden ?></td>
 								<td>
-									<b><?= $value->empresa_envio ?></b><br>
+									<b><?= $value->expedicion ?></b><br>
 									Paquete : <?= $value->paquete ?><br>
 									Envío : <?= number_format($value->costo_envio, 0) ?>
 								</td>
@@ -242,7 +242,7 @@
 						<tr>
 							<th>Expedicion</th>
 							<th>:</th>
-							<th><?= $value->empresa_envio ?></th>
+							<th><?= $value->expedicion ?></th>
 						</tr>
 						<tr>
 							<th>Paquete</th>
