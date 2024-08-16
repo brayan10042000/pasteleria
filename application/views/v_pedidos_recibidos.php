@@ -1,11 +1,11 @@
 <div class="col-sm-12">
 	<?php
 
-	if ($this->session->flashdata('pesan')) {
+	if ($this->session->flashdata('mensaje')) {
 		echo '<div class="alert alert-success alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 		<h5><i class="icon fas fa-check"></i>';
-		echo $this->session->flashdata('pesan');
+		echo $this->session->flashdata('mensaje');
 		echo '</h5>
 	</div>';
 	}
@@ -60,7 +60,7 @@
 								<td>
 									<?php if ($value->estado_pago == 1) { ?>
 										<button class="btn btn-sm btn-success btn-flat" data-toggle="modal" data-target="#cek<?= $value->id_transaccion ?>">Cheque Comprobante de Pago</button>
-										<a href="<?= base_url('admin/procesar/' . $value->id_transaccion) ?>" class="btn btn-sm btn-flat btn-primary">Proceso</a>
+										<a href="<?= base_url('admin/procesar/' . $value->id_transaccion) ?>" class="btn btn-sm btn-flat btn-primary">Procesar</a>
 									<?php } ?>
 
 								</td>

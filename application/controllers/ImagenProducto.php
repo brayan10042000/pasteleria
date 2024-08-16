@@ -38,7 +38,7 @@ class ImagenProducto extends CI_Controller
                     'error_upload' => $this->upload->display_errors(),
                     'producto'  => $this->m_producto->get_data($id_producto),
                     'imagen' => $this->m_imagenproducto->get_imagen($id_producto),
-                    'isi' => 'imagenproducto/v_agregar',
+                    'contenido' => 'imagenproducto/v_agregar',
                 );
                 $this->load->view('layout/v_wrapper_backend', $data, FALSE);
             } else {
@@ -61,7 +61,7 @@ class ImagenProducto extends CI_Controller
             'title' => 'Agregar Imagen del Producto',
             'producto'  => $this->m_producto->obtener_datos($id_producto),
             'imagen' => $this->m_imagenproducto->obtener_imagen($id_producto),
-            'isi' => 'imagenproducto/v_agregar',
+            'contenido' => 'imagenproducto/v_agregar',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }

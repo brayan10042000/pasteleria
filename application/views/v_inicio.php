@@ -102,7 +102,7 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="text-left">
-										<h4><span class="badge bg-primary">Precio. <?= number_format($value->precio, 0) ?></span></h4>
+										<h4><span class="badge bg-primary">Precio: <?= number_format($value->precio, 0) ?></span></h4>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -139,7 +139,7 @@
 		$('.swalDefaultSuccess').click(function() {
 			Toast.fire({
 				icon: 'success',
-				title: 'Item Added To Cart Successfully !!!'
+				title: 'Artículo agregado al carrito exitosamente !!!'
 			})
 		});
 	});

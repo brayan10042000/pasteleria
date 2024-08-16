@@ -153,8 +153,8 @@
 	<input name="peso" value="<?= $tot_peso ?>" hidden><br>
 	<input name="total_general" value="<?= $this->cart->total() ?>" hidden>
 	<input name="total_pago" hidden>
-	<!-- end Simpan Transaksi -->
-	<!-- Simpan Rinci Transaksi -->
+	
+
 	<?php
 	$i = 1;
 	foreach ($this->cart->contents() as $items) {
@@ -162,7 +162,7 @@
 	}
 
 	?>
-	<!-- end Simpan Rinci Transaksi -->
+	
 	<div class="row no-print">
 		<div class="col-12">
 			<a href="<?= base_url('carrito')  ?>" class="btn btn-warning"><i class="fas fa-backward"></i> Volver al carrito</a>
@@ -179,17 +179,17 @@
 
 <script>
 	$(document).ready(function() {
-		//masukkan data ke selec provinsi
+	
 		$.ajax({
 			type: "POST",
 			url: "<?= base_url('rajaongkir/provincia') ?>",
 			success: function(resultados_provinciales) {
-				//console.log(hasil_provinsi);
+				
 				$("select[name=provincia]").html(resultados_provinciales);
 			}
 		});
 
-		//masukkan data ke selec kota
+		
 		$("select[name=provincia]").on("change", function() {
 			var id_provincia_seleccionada = $("option:selected", this).attr("id_provincia");
 			$.ajax({
@@ -212,13 +212,13 @@
 			});
 		});
 
-		//mendapatkan data paket
+		
 		$("select[name=expedicion]").on("change", function() {
-			//mendapatkan expedisi terpilih
+			
 			var expedición_seleccionada = $("select[name=expedicion]").val()
-			// mendapatkan id kota tujuan terpilih
+			
 			var id_ciudad_destino_seleccionado = $("option:selected", "select[name=ciudad]").attr('id_ciudad');
-			//mengambil data ongkos kirim
+			
 			var total_peso = <?= $tot_peso ?>;
 
 			$.ajax({
@@ -233,21 +233,21 @@
 
 		//
 		$("select[name=paquete]").on("change", function() {
-			//menampilkan ongkir
+		
 			var datos_envio = $("option:selected", this).attr('costo_envio');
 			var reverse = datos_envio.toString().split('').reverse().join(''),
 			gastos_envio = reverse.match(/\d{1,3}/g);
 			gastos_envio = gastos_envio.join(',').split('').reverse().join('');
 
 			$("#costo_envio").html("Rp. " + gastos_envio)
-			//menghitung totol Bayar
+			
 			var datos_total_pagado = parseInt(datos_envio) + parseInt(<?= $this->cart->total() ?>);
 			var reverse2 = datos_total_pagado.toString().split('').reverse().join(''),
 				costo_total_pagado = reverse2.match(/\d{1,3}/g);
 			costo_total_pagado = costo_total_pagado.join(',').split('').reverse().join('');
 			$("#total_pagado").html("Rp. " + costo_total_pagado);
 
-			//estimasi dan ongkir
+			
 			var estimacion = $("option:selected", this).attr('estimacion');
 			$("input[name=estimacion]").val(estimacion);
 			$("input[name=costo_envio]").val(datos_envio);

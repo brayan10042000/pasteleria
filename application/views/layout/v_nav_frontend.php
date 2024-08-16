@@ -36,6 +36,11 @@
                     <a href="#" class="nav-link text-white" data-toggle="modal" data-target="#exampleModal">Contactanos</a>
                 </li>
                 <li class="nav-item">
+                    <a href="https://wa.me/573005394832" class="nav-link text-white" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </li>
+                <li class="nav-item">
                     <?php if ($this->session->userdata('correo') == "") { ?>
                         <a class="nav-link" href="<?= base_url('cliente/login') ?>">
                             <span class="brand-text font-weight-light text-white">Entrar/Registrarse</span>
@@ -54,7 +59,7 @@
                                 <div class="brand-image img-circle elevation-3" style="background-color: #fff; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; color: #000; opacity: .8;">
                                     <?= $acronimos ?>
                                 </div>
-                                <span class="brand-text font-weight-light ml-2"><?= $nombre_cliente ?></span>
+                                <span class="brand-text font-weight-light ml-2" style="margin-left: 10px;"><?= $nombre_cliente ?></span>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -100,9 +105,9 @@
                                             <h3 class="dropdown-item-title">
                                                 <?= $value['name'] ?>
                                             </h3>
-                                            <p class="text-sm"><?= $value['qty'] ?> x Precio.<?= number_format($value['price'], 0) ?></p>
+                                            <p class="text-sm"><?= $value['qty'] ?> x Precio:<?= number_format($value['price'], 0) ?></p>
                                             <p class="text-sm text-muted">
-                                                <i class="fa fa-calculator"></i> Precio.<?= $this->cart->format_number($value['subtotal']); ?>
+                                                <i class="fa fa-calculator"></i> Precio:<?= $this->cart->format_number($value['subtotal']); ?>
                                             </p>
                                         </div>
                                     </div>
@@ -144,8 +149,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>WHATSAPP: 300 5394832</p>
-                <p>EMAIL: pasteleriasam@gmail.com</p>
+                <p>WHATSAPP: <a href="https://wa.me/573005394832" target="_blank">300 5394832</a></p>
+                <p>EMAIL: <a href="mailto:pasteleriasam@gmail.com">pasteleriasam@gmail.com</a></p>
                 <p>DIRECCION: CC Paseo Villa Del Rio Piso 1 - Bogotá.</p>
             </div>
             <div class="modal-footer">

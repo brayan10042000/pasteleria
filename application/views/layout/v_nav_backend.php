@@ -51,7 +51,7 @@
                         echo "active";
                         } ?>">
                         <i class="nav-icon fas fa-list"></i>
-                        <p> Categoria </p>
+                        <p> Categorias </p>
                     </a>
                 </li>
                 <?php }  ?>
@@ -60,7 +60,7 @@
                         echo "active";
                         } ?>">
                         <i class="nav-icon fas  fa-birthday-cake"></i>
-                        <p> Producto </p>
+                        <p> Productos </p>
                     </a>
                 </li>
 
@@ -69,7 +69,7 @@
                     echo "active";
                     } ?>">
                         <i class="nav-icon fas  fa-image"></i>
-                        <p> Detalle del Producto </p>
+                        <p> Imagenes de los Productos </p>
                     </a>
                 </li>
 
@@ -85,7 +85,7 @@
                 <li class="nav-item">
                     <a href="<?= base_url('reporte') ?>" class="nav-link">
                         <i class="nav-icon fa fa-file"></i>
-                        <p> Reporte </p>
+                        <p> Reportes </p>
                     </a>
                 </li>
                 
@@ -105,7 +105,7 @@
                     echo "active";
                     } ?>">
                         <i class="nav-icon fas fa-users"></i>
-                        <p> Usuario </p>
+                        <p> Usuarios </p>
                     </a>
                 </li>
                 <?php }  ?>
@@ -115,7 +115,7 @@
                     echo "active";
                     } ?>">
                         <i class="nav-icon fas fa-users"></i>
-                        <p> Miembros </p>
+                        <p> Clientes </p>
                     </a>
                 </li>
                 <li class="nav-item">

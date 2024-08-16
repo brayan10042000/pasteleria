@@ -5,12 +5,12 @@
 				<h3 class="card-title">Número de cuenta de la tienda</h3>
 			</div>
 			<div class="card-body">
-				<p>Transfiera dinero al número de cuenta a continuación : <h1 class="text-primary">Precio. <?= number_format($pedido->total_pago, 0) ?>.-</h1>
+				<p>Transfiera dinero al número de cuenta a continuación : <h1 class="text-primary">Precio: <?= number_format($pedido->total_pago, 0) ?>.-</h1>
 				</p><br>
 				<table class="table">
 					<tr>
 						<th>Banco</th>
-						<th>No compensación</th>
+						<th>No cuenta</th>
 						<th>Nombre</th>
 					</tr>
 					<?php foreach ($cuenta_bancaria as $key => $value) { ?>

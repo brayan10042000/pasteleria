@@ -27,20 +27,43 @@ class M_producto extends CI_Model
     public function agregar($data)
     {
         $this->db->insert('tbl_producto', $data);
+        if ($this->db->affected_rows() > 0) {
+        return true;
+    } 
+    else 
+    {
+        return $this->db->error(); // Devuelve el error si la inserción falla
+    }
     }
 
     // editar datos
     public function editar($data)
-    {
-        $this->db->where('id_producto', $data['id_producto']);
-        $this->db->update('tbl_producto', $data);
+{
+    $this->db->where('id_producto', $data['id_producto']);
+    $this->db->update('tbl_producto', $data);
+
+    if ($this->db->affected_rows() > 0) {
+        return true; // Actualización exitosa
+    } else {
+        if ($this->db->affected_rows() == 0 && $this->db->error()['code'] == 0) {
+            return true; // No hubo cambios, pero no es un error
+        } else {
+            return $this->db->error(); // Devuelve el error si la actualización falla
+        }
     }
+}
 
     // eliminar datos
     public function eliminar($data)
-    {
-        $this->db->where('id_producto', $data['id_producto']);
-        $this->db->delete('tbl_producto', $data);
+{
+    $this->db->where('id_producto', $data['id_producto']);
+    $this->db->delete('tbl_producto');
+
+    if ($this->db->affected_rows() > 0) {
+        return true; // Eliminación exitosa
+    } else {
+        return $this->db->error(); // Devuelve el error si la eliminación falla
     }
+}
 }
 ?>

@@ -51,7 +51,7 @@
 
 			<div class="form-group">
 				<label>Descripcion</label>
-				<textarea name="descripcion" class="form-control" rows="5" placeholder="Description.."><?= set_value('descripcion') ?></textarea>
+				<textarea name="descripcion" class="form-control" rows="5" placeholder="Descripcion.."><?= set_value('descripcion') ?></textarea>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">

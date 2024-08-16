@@ -63,7 +63,7 @@ class Producto extends CI_Controller
                     'descripcion' => $this->input->post('descripcion'),
                     'imagen' => $upload_data['uploads']['file_name'],
                 );
-                $this->m_producto->add($data);
+                $this->m_producto->agregar($data);
                 $this->session->set_flashdata('mensaje', 'Datos agregados con éxito!!!');
                 redirect('producto');
             }
@@ -163,7 +163,7 @@ class Producto extends CI_Controller
         }
         // fin eliminar imagen
         $data = array('id_producto' => $id_producto);
-        $this->m_producto->delete($data);
+        $this->m_producto->eliminar($data);
         $this->session->set_flashdata('mensaje', 'Datos eliminados con éxito !!!');
         redirect('producto');
     }

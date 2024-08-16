@@ -41,7 +41,7 @@
 								Tamaño : <?= $value->peso ?> Gr
 							</td>
 							<td class="text-center"><?= $value->nombre_categoria ?></td>
-							<td class="text-center">Rp. <?= number_format($value->precio, 0) ?></td>
+							<td class="text-center">Precio: <?= number_format($value->precio, 0) ?></td>
 							<td class="text-center"><img src="<?= base_url('assets/imagen/' . $value->imagen) ?>" width="150px"></td>
 							<td class="text-center"><?= $value->descripcion ?></td>
 							<td class="text-center">

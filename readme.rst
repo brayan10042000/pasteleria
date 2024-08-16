@@ -1,75 +1,66 @@
 ###################
-About APP
+Acerca de la APP
 
-Aplikasi E-commerce ini dibuat menggunakan CodeIgniter3,silahkan di clone dan dikembangkan dengan bebas.
-- Dua Role User (Admin) & (SuperAdmin)
-- Login & Register Pelanggan
-- Checkout barang
-- Terintegrasi API RajaOngkir, ongkir sesuai jarak.
-dan masih banyak lagi fitur yang tersedia..silahkan dicoba dan jangan lupa di kasih bintang guys.
+Esta aplicación de e-commerce que tiene como objetivo ayudar a cotizar los productos que ofrece la pasteleria SAM está creada utilizando CodeIgniter 3
+- Dos roles de usuario: (Admin) y (SuperAdmin)
+- Inicio de sesión y registro de clientes
+- Proceso de compra (checkout)
+Y muchas otras funciones disponibles... ¡Por favor pruébala y no olvides darle una estrella, chicos!
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
-
+CodeIgniter es un Framework para el Desarrollo de Aplicaciones, una herramienta para personas que
+construyen sitios web utilizando PHP. Su objetivo es permitirte desarrollar proyectos mucho más rápido
+de lo que podrías si estuvieras escribiendo código desde cero, proporcionando un conjunto
+rico de bibliotecas para tareas comúnmente necesarias, así como una interfaz simple y una estructura lógica
+para acceder a estas bibliotecas. CodeIgniter te permite centrarte creativamente en tu proyecto minimizando
+la cantidad de código necesario para una tarea dada.
 ###################
-What is CodeIgniter
+Qué es CodeIgniter
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+CodeIgniter es un Framework para el Desarrollo de Aplicaciones, una herramienta para personas que
+construyen sitios web utilizando PHP. Su objetivo es permitirte desarrollar proyectos mucho más rápido
+de lo que podrías si estuvieras escribiendo código desde cero, proporcionando un conjunto rico de bibliotecas
+para tareas comúnmente necesarias, así como una interfaz simple y una estructura lógica para acceder a estas bibliotecas. 
+CodeIgniter te permite centrarte creativamente en tu proyecto minimizando la cantidad de código necesario para una tarea dada.
 
 *******************
-Release Information
+Información de la Versión
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
+Este repositorio contiene código en desarrollo para futuras versiones. 
+Para descargar la última versión estable, por favor visita la `CodeIgniter Downloads
 <https://codeigniter.com/download>`_ page.
 
 **************************
-Changelog and New Features
+Registro de Cambios y Nuevas Características
 **************************
 
-You can find a list of all changes for each release in the `user
+Puedes encontrar una lista de todos los cambios para cada versión en el `user
 guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
 *******************
-Server Requirements
+Requisitos del Servidor
 *******************
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Se recomienda usar PHP versión 5.6 o más reciente.
 
 ************
-Installation
+Instalación
 ************
 
 Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
 of the CodeIgniter User Guide.
 
 *******
-License
+Licencia
 *******
 
-Please see the `license
+Por favor, consulta la `license
 agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
 *********
-Resources
+Recursos
 *********
 
 -  `User Guide <https://codeigniter.com/docs>`_
@@ -78,12 +69,6 @@ Resources
 -  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
 -  `Community Slack Channel <https://codeigniterchat.slack.com>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+Reporta problemas de seguridad a nuestro `Security Panel <mailto:security@codeigniter.com>`_
+o a través de nuestra `page on HackerOne <https://hackerone.com/codeigniter>`_, gracias..
+*********

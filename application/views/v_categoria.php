@@ -69,7 +69,7 @@
 
 				<div class="form-group">
 					<label>Nombre de Categoria</label>
-					<input type="text" name="nombre_categoria" class="form-control" placeholder="Name Category" required>
+					<input type="text" name="nombre_categoria" class="form-control" placeholder="Nombre de Categoria" required>
 				</div>
 
 			</div>

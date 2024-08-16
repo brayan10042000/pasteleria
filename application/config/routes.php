@@ -52,3 +52,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'inicio';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['api/demo'] = 'api/ApiDemoController/index';
+$route['api/producto'] = 'api/ApiProducto/index';
+$route['api/producto/agregar'] = 'api/ApiProducto/agregar';
+$route['api/producto/actualizar(:any)'] = 'api/ApiProducto/editar/$1';
+$route['api/producto/eliminar(:any)'] = 'api/ApiProducto/eliminar/$1';
+
+$route['api/categoria'] = 'api/ApiCategoria/index';
+$route['api/categoria/agregar'] = 'api/ApiCategoria/agregar';
+$route['api/categoria/actualizar(:any)'] = 'api/ApiCategoria/editar/$1';
+$route['api/categoria/eliminar(:any)'] = 'api/ApiCategoria/eliminar/$1';
+
+$route['api/usuario'] = 'api/ApiUsuario/index';
+$route['api/usuario/agregar'] = 'api/ApiUsuario/agregar';
+$route['api/usuario/actualizar(:any)'] = 'api/ApiUsuario/editar/$1';
+$route['api/usuario/eliminar(:any)'] = 'api/ApiUsuario/eliminar/$1';

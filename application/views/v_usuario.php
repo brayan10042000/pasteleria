@@ -1,7 +1,7 @@
 <div class="col-md-12">
 	<div class="card card-primary">
 		<div class="card-header">
-			<h3 class="card-title">Datos de Miembros</h3>
+			<h3 class="card-title">Datos de Usuarios</h3>
 
 			<div class="card-tools">
 				<button data-toggle="modal" data-target="#agregar" type="button" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Añadir</button>
@@ -81,7 +81,7 @@
 
 				<div class="form-group">
 					<label>Nombre de Usuario</label>
-					<input type="text" name="nombre_usuario" class="form-control" placeholder="Name User" required>
+					<input type="text" name="nombre_usuario" class="form-control" placeholder="Nombre de Usuario" required>
 				</div>
 
 				<div class="form-group">
@@ -91,7 +91,7 @@
 
 				<div class="form-group">
 					<label>Contraseña</label>
-					<input type="text" name="contraseña" class="form-control" placeholder="Password" required>
+					<input type="text" name="contraseña" class="form-control" placeholder="Contraseña" required>
 				</div>
 
 			</div>
